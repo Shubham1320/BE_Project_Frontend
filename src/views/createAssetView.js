@@ -15,8 +15,8 @@ class CreateAsset extends Component
         	channelName:this.props.channelName,
         	chaincodeName:this.props.chaincodeName,
         	organization:this.props.organization,
-          	orgUserId:this.props.orgUserId,
-          	msp:this.props.msp,
+          orgUserId:this.props.orgUserId,
+          msp:this.props.msp,
 
         	assetName: "",
         	assetSize: "",
@@ -54,10 +54,10 @@ class CreateAsset extends Component
   			
   			assetKey: assetKey,
   			assetName: this.state.assetName,
-			manufacturingDate: this.state.manufacturingDate,
-	 		expiryDate: this.state.expiryDate,
-			size: this.state.assetSize,
-			assetDescription: this.state.assetDescription
+  			manufacturingDate: this.state.manufacturingDate,
+  	 		expiryDate: this.state.expiryDate,
+  			size: this.state.assetSize,
+  			assetDescription: this.state.assetDescription
 
   		} 
 
@@ -80,95 +80,95 @@ class CreateAsset extends Component
   	{
 
   		return (
-  			<CForm action="" method="post">
+    		<CForm action="" method="post">
 
-				<CRow style={{"padding-left":"20px","padding-top":"20px"}}>
-					
-					<CCol sm={3} >
-						<Label htmlFor="assetName">Asset Name</Label>
-						<CInput
-        					id="assetName"
-        					name="assetName"
-        					placeholder="Asset Name"
-        					value={this.state.assetName}
-        					onChange={this.onInputchange}
-        					autoComplete="off"
-        				/>	
-    				</CCol>
+  				<CRow style={{"padding-left":"20px","padding-top":"20px"}}>
+  					
+  					<CCol sm={3} >
+  						<Label htmlFor="assetName">Asset Name</Label>
+  						<CInput
+          					id="assetName"
+          					name="assetName"
+          					placeholder="Asset Name"
+          					value={this.state.assetName}
+          					onChange={this.onInputchange}
+          					autoComplete="off"
+          				/>	
+      				</CCol>
 
-    				<CCol sm={3}>
-    					<Label htmlFor="assetSize">Asset Size</Label>
-    					<CInput
-    						
-        					id="assetSize"
-        					name="assetSize"
-        					placeholder="Asset Size"
-        					value={this.state.assetSize}
-        					onChange={this.onInputchange}
-        					autoComplete="off"
-        				/>
-        			</CCol>
+      				<CCol sm={3}>
+      					<Label htmlFor="assetSize">Asset Size</Label>
+      					<CInput
+      						
+          					id="assetSize"
+          					name="assetSize"
+          					placeholder="Asset Size"
+          					value={this.state.assetSize}
+          					onChange={this.onInputchange}
+          					autoComplete="off"
+          				/>
+          			</CCol>
 
-        			<CCol sm={3}>
-        				<Label htmlFor="assetDescription">Asset Description</Label>
-        				<CSelect
-        					
-        					id="assetDescription"
-        					name="assetDescription"
-        					placeholder="Asset Description"
-        					onChange={this.onInputchange}
-        					>
+          			<CCol sm={3}>
+          				<Label htmlFor="assetDescription">Asset Description</Label>
+          				<CSelect
+          					
+          					id="assetDescription"
+          					name="assetDescription"
+          					placeholder="Asset Description"
+          					onChange={this.onInputchange}
+          					>
 
-        					<option selected value="" disabled>Asset Description</option>
-        					<option value="Not for sale">Not for sale</option>
-        					<option value="Up for sale">Up for sale</option> 
-        					
-        				</CSelect>	
-        			</CCol>	
-    				
-				</CRow>
+          					<option selected value="" disabled>Asset Description</option>
+          					<option value="Not for sale">Not for sale</option>
+          					<option value="Up for sale">Up for sale</option> 
+          					
+          				</CSelect>	
+          			</CCol>	
+      				
+  				</CRow>
 
-				<CRow style={{"padding-left":"20px","padding-top":"20px"}}>
+  				<CRow style={{"padding-left":"20px","padding-top":"20px"}}>
 
-					<CCol sm={3}>
-						<Label htmlFor="manufacturingDate">Manufacturing Date</Label>
-						<CInput
-							type="date"
-        					id="manufacturingDate"
-        					name="manufacturingDate"
-        					onChange={this.onInputchange}      						
-        				/>
+  					<CCol sm={3}>
+  						<Label htmlFor="manufacturingDate">Manufacturing Date</Label>
+  						<CInput
+  							type="date"
+          					id="manufacturingDate"
+          					name="manufacturingDate"
+          					onChange={this.onInputchange}      						
+          				/>
 
-					</CCol>
+  					</CCol>
 
-					<CCol sm={3}>
-						<Label htmlFor="expiryDate">Expiry Date</Label>
-						<CInput
-							type="date"
-        					id="expiryDate"
-        					name="expiryDate"
-        					onChange={this.onInputchange}      						
-        				/>
+  					<CCol sm={3}>
+  						<Label htmlFor="expiryDate">Expiry Date</Label>
+  						<CInput
+  							type="date"
+          					id="expiryDate"
+          					name="expiryDate"
+          					onChange={this.onInputchange}      						
+          				/>
 
-					</CCol>		
+  					</CCol>		
 
-				</CRow>	
-				
-				<hr/>
+  				</CRow>	
+  				
+  				<hr/>
 
-				<CRow style={{"padding-left":"20px","padding-top":"5px"}}>
-					<CCol sm={3}>
-						<CButton 
-							color="success"
-							onClick={this.createAsset}
-						>
-						Create Asset
-									
-						</CButton>
+  				<CRow style={{"padding-left":"20px","padding-top":"5px"}}>
+  					<CCol sm={3}>
+  						<CButton 
+  							color="success"
+  							onClick={this.createAsset}
+  						>
+  						Create Asset
+  									
+  						</CButton>
 
-					</CCol>	
-				</CRow>	
-        	</CForm>	
+  					</CCol>	
+  				</CRow>	
+        </CForm>	
 
   		)
 
