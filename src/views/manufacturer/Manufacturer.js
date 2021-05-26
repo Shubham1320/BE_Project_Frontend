@@ -16,6 +16,7 @@ import PutForSale from "../putForSaleView.js";
 import OfferBid from "../offerBidView.js";
 import QueryPrice from "../queryPriceView.js";
 import TransferAsset from "../transferAssetView.js";
+import TrackAsset from "../trackAssetView.js";
 
 class Manufacturer extends Component
 {
@@ -130,6 +131,12 @@ class Manufacturer extends Component
                           </CNavLink>
                       </CNavItem>
 
+                      <CNavItem>
+                          <CNavLink data-tab="track-asset">
+                            Track Asset
+                          </CNavLink>
+                      </CNavItem>
+
                     </CNav>
 
                     <CTabContent >
@@ -196,6 +203,16 @@ class Manufacturer extends Component
                           />
 
                       </CTabPane>  
+
+                      <CTabPane data-tab="track-asset">
+                          <TrackAsset 
+                            channelName={this.state.channelName}
+                            chaincodeName={this.state.chaincodeName}
+                            organization={this.state.organization}
+                            orgUserId={this.state.orgUserId}
+                          />
+
+                      </CTabPane> 
 
                     </CTabContent>  
         
